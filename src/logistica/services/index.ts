@@ -1,0 +1,9 @@
+export { CatalogoProductoService } from './catalogo-producto.service';
+export { CatalogoService } from './catalogo.service';
+export { DespachoService } from './despacho.service';
+export { DisponibilidadZonaService } from './disponibilidad-zona.service';
+export { NotaCreditoService } from './nota-credito.service';
+export { PedidoService } from './pedido.service';
+export { ProductoService } from './producto.service';
+export { PromocionService } from './promocion.service';
+export { TenderoService } from './tendero.service';

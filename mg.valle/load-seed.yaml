@@ -1,0 +1,48 @@
+load:
+  # =============================================================
+  # VALORES PLACEHOLDER — NO son un escenario de prueba válido.
+  #
+  # Estos números son arbitrarios y uniformes: sirven solo para que
+  # la app arranque y el seeder funcione. Antes de ejecutar el
+  # laboratorio DEBE reemplazarlos por su propio diseño de datos,
+  # justificado con el contexto de Cheapest (ver lab_2_warmup.md y
+  # el entregable 1). Un diseño realista NO es uniforme: hay tiendas
+  # que compran mucho más que otras, zonas con más actividad y
+  # productos más populares (distribución tipo Pareto).
+  # =============================================================
+
+  # --- Dimensiones del negocio ---
+  tiendas: 200          # placeholder — ¿cuántas tiendas modela su ciudad?
+  zonas: 10            # placeholder — ¿cuántas zonas y cuál es la "cabeza"?
+
+  # Distribución de la actividad sobre tiendas/zonas/productos.
+  # Sin esta llave el seeder reparte todo de forma uniforme (round-robin).
+  # Descoméntela y ajústela para modelar la concentración real:
+  distribucion:
+    tipo: pareto
+    peso_cabeza: 0.8       # fracción de la actividad que cae en la cabeza
+    fraccion_cabeza: 0.2   # tamaño de la cabeza respecto del pool
+  # Para 200 pedidos
+  # el 80% de actividad (160 pedidos) van a asignarse a Tienda "cabeza" 
+  # el 20% de actividad (40 pedidos) van a asignarse a Tiendas "cola"
+
+  # --- Logística ---  (placeholders — ajuste cada conteo y su razón)
+  productos: 1200
+  catalogos: 300
+  catalogos_productos: 15000
+  promociones: 150
+  pedidos: 20000
+  items_pedido: 60000
+  despachos: 8000
+  disponibilidad_zona: 15000
+  notas_credito: 400
+
+  # --- Inventario ---
+  items_inventario: 6000
+  registros_compra_producto_tienda: 10000
+  registros_venta_producto_tienda: 10000
+
+  # --- Ventas ---
+  productos_externos: 150
+  ventas: 5000
+  items_venta: 15000
